@@ -12,9 +12,7 @@
 </style>
 
 <div class="uv-file">
-  <%= syntax_highlight(filename, to_utf8_for_attachments(content)) %>
- 	 	
-
+  <%= syntax_highlight( filename, Redmine::CodesetUtil.to_utf8_by_setting(content) ) %>
 </div>
 
 <% content_for :header_tags do %>
